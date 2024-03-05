@@ -177,46 +177,20 @@
 
 <main class="main">
   <div class="content">
-    <div class="left-side">
-      <h1>{{ title }}</h1>
-      <!-- <p>Congratulations! Your app is running. 🎉</p> -->
-      <div>
-        <h3>Culture: {{cultureCounter}}</h3>
-        <img class="ttaIcon" src="../assets/Culture.PNG" alt="">
-        <button class="ttaBtn" (click)="minusCulture()">-1</button>
-        <button class="ttaBtn" (click)="addCulture()">+1</button>
+    <!-- 
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+      </mat-grid-list> -->
+    <!-- <mat-grid-list cols="2" rowHeight="2:1"> -->
 
-      </div>
-      <div>
-        <button class="ttaBtn" (click)="minusEachTurnCulture()">-</button>
-        <button class="ttaBtn" (click)="addEachTurnCulture()">+{{eachTurnCultureCounter}}</button>
-        <button class="ttaBtn" (click)="resolveCulture(eachTurnCultureCounter)">ResolveCulture</button>
-      </div>
+    <app-counter [class]="'mat-red'"></app-counter>
+    <app-counter class="inline-block"></app-counter>
+    <app-counter class="inline-block"></app-counter>
+    <app-counter class="inline-block"></app-counter>
+    <!-- </mat-grid-list> -->
 
-
-      <div scienceCulture>
-        <h3>Science: {{scienceCounter}}</h3>
-        <img class="ttaIcon" src="../assets/Science.PNG" alt="">
-        <button class="ttaBtn" (click)="minusScience()">-1</button>
-        <button class="ttaBtn" (click)="addScience()">+1</button>
-      </div>
-      <div>
-        <button class="ttaBtn" (click)="minusEachTurnScience()">-</button>
-        <button class="ttaBtn" (click)="addEachTurnScience()">+{{eachTurnScienceCounter}}</button>
-        <button class="ttaBtn" (click)="resolveScience(eachTurnScienceCounter)">ResolveScience</button>
-      </div>
-
-    </div>
   </div>
 </main>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 
 <router-outlet />

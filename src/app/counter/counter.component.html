@@ -1,0 +1,24 @@
+<div class="example-button-row">
+
+
+    <mat-card>
+        <mat-card-content>
+            <mat-card-title></mat-card-title>
+            <!-- <img class="ttaIcon" src="../assets/Culture.PNG" alt=""> -->
+            <h5>Culture: {{cultureCounter}}</h5>
+            <button mat-raised-button class="myBtn theme-green" (click)="addCulture()">+1</button>
+            <button mat-raised-button class="myBtn" (click)="minusCulture()">-1</button>
+            <button mat-raised-button class="myBtn" (click)="addEachTurnCulture()">+{{eachTurnCultureCounter}}</button>
+            <button mat-raised-button class="myBtn" (click)="minusEachTurnCulture()">-</button>
+            <button mat-raised-button (click)="resolveCulture()">ResolveCultura</button>
+            <mat-divider></mat-divider>
+            <!-- <img class="ttaIcon" src="../assets/Science.PNG" alt=""> -->
+            <h5>Science: {{scienceCounter}}</h5>
+            <button mat-raised-button class="myBtn" color="primary" (click)="addScience()">+1</button>
+            <button mat-raised-button class="myBtn" color="primary" (click)="minusScience()">-1</button>
+            <button mat-raised-button class="myBtn" color="primary"
+                (click)="addEachTurnScience()">+{{eachTurnScienceCounter}}</button>
+            <button mat-raised-button class="myBtn" color="primary" (click)="minusEachTurnScience()">-</button>
+            <button mat-raised-button (click)="resolveScience()">ResolveScience</button>
+        </mat-card-content>
+    </mat-card>

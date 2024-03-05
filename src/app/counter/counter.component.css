@@ -1,0 +1,12 @@
+.myBtn {
+    width: 10px!important;
+      min-width: unset!important;
+}
+
+.inline-block {
+    display: inline-block;
+  }
+
+.mat-red {
+    background-color:red
+}

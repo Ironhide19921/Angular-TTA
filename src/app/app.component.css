@@ -7,3 +7,15 @@ padding: 10px;
     padding-bottom: 10px;
 }
 
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+
+  :host-context(.theme-green) h5 {
+    background-color: green;
+ }
+ 
+ :host-context(.theme-red) h5 {
+    background-color: red;
+ }

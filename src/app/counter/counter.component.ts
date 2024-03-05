@@ -1,18 +1,16 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
-import { CounterComponent } from './counter/counter.component';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { Component, Input } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-counter',
   standalone: true,
-  imports: [RouterOutlet, MatIconModule, CounterComponent, MatGridListModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  imports: [MatButtonModule, MatCardModule, MatDividerModule],
+  templateUrl: './counter.component.html',
+  styleUrl: './counter.component.css',
 })
-export class AppComponent {
-  title = 'TTA';
+export class CounterComponent {
   public cultureCounter: number = 1;
   public eachTurnCultureCounter: number = 1;
   public scienceCounter: number = 1;
@@ -48,11 +46,11 @@ export class AppComponent {
     this.eachTurnScienceCounter -= 1;
   }
 
-  resolveCulture(val: number) {
-    this.cultureCounter += val;
+  resolveCulture() {
+    this.cultureCounter += this.eachTurnCultureCounter;
   }
 
-  resolveScience(val: number) {
-    this.scienceCounter += val;
+  resolveScience() {
+    this.scienceCounter += this.eachTurnScienceCounter;
   }
 }
