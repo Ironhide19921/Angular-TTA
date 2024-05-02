@@ -1,12 +1,17 @@
 .myBtn {
     width: 10px!important;
-      min-width: unset!important;
+    min-width: unset!important;
 }
 
 .inline-block {
     display: inline-block;
   }
 
-.mat-red {
-    background-color:red
-}
+  /* .ttaIcon {
+    line-height: 0 !important;
+  } */
+  
+  .material-icons {
+    line-height: inherit;
+  }
+  

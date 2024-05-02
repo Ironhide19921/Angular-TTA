@@ -2,12 +2,22 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { CounterComponent } from './counter/counter.component';
+import { PlayerSelectionComponent } from './player-selection/player-selection.component';
 import { MatGridListModule } from '@angular/material/grid-list';
-
+import { NgClass, NgIf } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatIconModule, CounterComponent, MatGridListModule],
+  imports: [
+    RouterOutlet,
+    MatIconModule,
+    CounterComponent,
+    PlayerSelectionComponent,
+    MatGridListModule,
+    MatIconModule,
+    NgClass,
+    NgIf,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -17,6 +27,11 @@ export class AppComponent {
   public eachTurnCultureCounter: number = 1;
   public scienceCounter: number = 1;
   public eachTurnScienceCounter: number = 1;
+  selectedPlayers: string = '';
+
+  receivePlayers($event: string) {
+    this.selectedPlayers = $event;
+  }
 
   addCulture() {
     this.cultureCounter += 1;
