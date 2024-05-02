@@ -3,7 +3,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIcon } from '@angular/material/icon';
-import { startWith } from 'rxjs';
 
 @Component({
   selector: 'app-counter',
@@ -17,9 +16,11 @@ export class CounterComponent {
   public eachTurnCultureCounter: number = 1;
   public scienceCounter: number = 1;
   public eachTurnScienceCounter: number = 1;
-  public inputColor: string = 'red';
+  @Input() public inputColor:string = "";
 
   changeColor() {
+    console.log("color: ",this.inputColor);
+    
     switch (this.inputColor) {
       case 'red':
         this.inputColor = 'blue';

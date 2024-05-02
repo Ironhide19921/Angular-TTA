@@ -60,7 +60,7 @@
   main {
     width: 100%;
     min-height: 100%;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     padding: 1rem;
@@ -72,13 +72,18 @@
     max-width: 9.2rem;
   }
 
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
+  #player-div{
+    text-align: center;
   }
+
+  .content {
+    justify-content: space-around;
+    margin-bottom: 3rem;
+    width: 34%;
+    margin-left: calc(33%);
+    min-width: 235px;
+  }
+
 
   .content h1 {
     margin-top: 1.75rem;
@@ -160,6 +165,11 @@
     fill: var(--gray-900);
   }
 
+  #counter-div-1, #counter-div-2{
+    display: flex;
+  }
+
+  
   @media screen and (max-width: 650px) {
     .content {
       flex-direction: column;
@@ -177,22 +187,19 @@
 
 <main class="main">
   <div class="content">
-    <!-- <mat-grid-list cols="2" rowHeight="2:1" gutterSize="10px">
-      <mat-grid-tile colspan="2"> -->
-    <app-player-selection (onSelectedPlayers)="receivePlayers($event)"></app-player-selection>
-    <!-- </mat-grid-tile> -->
-    <!-- </mat-grid-list> -->
-    <!-- <mat-grid-list cols="2" rowHeight="2:1"> -->
-    <app-counter class="Player1"></app-counter>
-    <app-counter id="Player-2" *ngIf="selectedPlayers==='2' || selectedPlayers==='3' || selectedPlayers==='4'"
-      class="inline-block"></app-counter>
-    <!-- </mat-grid-list>
-    <mat-grid-list cols="2" rowHeight="2:1"> -->
-    <app-counter id="Player-3" *ngIf="selectedPlayers==='3' || selectedPlayers==='4' "
-      class="inline-block"></app-counter>
-    <app-counter id="Player-4" *ngIf="selectedPlayers==='4'" class="inline-block"></app-counter>
-    <!-- </mat-grid-list> -->
-
+    <div id="player-div">
+      <app-player-selection (onSelectedPlayers)="receivePlayers($event)"></app-player-selection>
+    </div>
+    <div id="counter-div-1">
+      <app-counter class="inline-block" [inputColor]="color1"></app-counter>
+      <app-counter id="Player-2" *ngIf="selectedPlayers==='2' || selectedPlayers==='3' || selectedPlayers==='4'"
+          class="inline-block" [inputColor]="color2"></app-counter>
+    </div>
+    <div id="counter-div-2">          
+      <app-counter id="Player-3" *ngIf="selectedPlayers==='3' || selectedPlayers==='4' "
+        class="inline-block" [inputColor]="color3"></app-counter>
+      <app-counter id="Player-4" *ngIf="selectedPlayers==='4'" class="inline-block" [inputColor]="color4"></app-counter>
+    </div>
   </div>
 </main>
 

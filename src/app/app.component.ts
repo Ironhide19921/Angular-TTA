@@ -28,6 +28,10 @@ export class AppComponent {
   public scienceCounter: number = 1;
   public eachTurnScienceCounter: number = 1;
   selectedPlayers: string = '';
+  public color1:string = "red";
+  public color2:string = "blue";
+  public color3:string = "green";
+  public color4:string = "yellow";
 
   receivePlayers($event: string) {
     this.selectedPlayers = $event;
