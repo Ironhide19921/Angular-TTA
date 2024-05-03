@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class PlayerSelectionComponent {
   @Output() onSelectedPlayers: EventEmitter<string> = new EventEmitter();
-  selectedValue: string = '';
+  selectedValue: string = "1";
 
   playerChange() {
     this.onSelectedPlayers.emit(this.selectedValue);

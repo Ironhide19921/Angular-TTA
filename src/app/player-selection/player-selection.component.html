@@ -1,6 +1,6 @@
-<mat-radio-group [(ngModel)]="selectedValue" (ngModelChange)="playerChange()">
-    <mat-radio-button value="1">1</mat-radio-button>
-    <mat-radio-button value="2">2</mat-radio-button>
-    <mat-radio-button value="3">3</mat-radio-button>
-    <mat-radio-button value="4">4</mat-radio-button>
+<mat-radio-group color="primary" [(ngModel)]="selectedValue" (ngModelChange)="playerChange()">
+    <mat-radio-button [checked]="true" value="1"><p class="pRadio">1</p></mat-radio-button>
+    <mat-radio-button value="2"><p class="pRadio">2</p></mat-radio-button>
+    <mat-radio-button value="3"><p class="pRadio">3</p></mat-radio-button>
+    <mat-radio-button value="4"><p class="pRadio">4</p></mat-radio-button>
 </mat-radio-group>

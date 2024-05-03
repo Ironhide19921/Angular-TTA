@@ -27,7 +27,7 @@ export class AppComponent {
   public eachTurnCultureCounter: number = 1;
   public scienceCounter: number = 1;
   public eachTurnScienceCounter: number = 1;
-  selectedPlayers: string = '';
+  selectedPlayers: string = "1";
   public color1:string = "red";
   public color2:string = "blue";
   public color3:string = "green";
